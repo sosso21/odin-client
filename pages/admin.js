@@ -109,7 +109,7 @@ const HandleChangeArr = (value ,parent,key )=>{
 
 <h2 className="fw-lighter mx-auto my-2">Administrateur</h2>
 <section className={AdminStyle.Navigation}>
-    <button className="btn btn-lg btn-outline-hermes" onClick={()=>setSeeSection("univ")} >Univercité</button>
+    <button className="btn btn-lg btn-outline-hermes" onClick={()=>setSeeSection("univ")} >université </button>
     <button className="btn btn-lg btn-outline-hermes" onClick={()=>setSeeSection("user")} >Membres</button>
 </section>
 {
@@ -171,7 +171,7 @@ language:[],
 level:"",
 tcf:false,
 place:"",
-publicSchool:true ,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajouter</button>
+publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajouter</button>
 </div>
 }
 </section>
