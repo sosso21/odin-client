@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import { useRouter } from "next/router";
 import Link from 'next/link'
 import Header from "../components/header";
@@ -75,6 +75,8 @@ export default () =>
   const [SeeSection, setSeeSection] = useState("univ")
 
   // univ
+  
+  const sliderRef = useRef("");
   const [toChange, setToChange] = useState("")
   const [searchInput, setSearchInput] = useState('')
   const [univlist, setunivlist] = useState(data)
@@ -114,7 +116,7 @@ const HandleChangeArr = (value ,parent,key )=>{
 </section>
 {
     SeeSection== "univ" ? <section>
-<section className="my-4">
+<section ref={sliderRef} className="my-4">
       {toChange ?  <div className="my-4" >
         <div className="input-group">
             <input className="form-control my-1" type="text" value={toChange.name} onChange={(e)=>setToChange({...toChange,name:e.target.value})}placeholder="nom"/>
@@ -209,7 +211,7 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
       Nombre de places restantes : <strong>+ {i.place}</strong>
      </span>
      <div className="input-group">
-<button  className="btn btn-lg btn-danger mx-auto">Supprimer</button>
+<button   onClick={()=>{setToChange({...i,status:"modify"});sliderRef.current.scrollIntoView({ behavior: 'smooth' })} } className="btn btn-lg btn-success mx-auto">Modifier</button>
 </div>
      </li>
       ) }
