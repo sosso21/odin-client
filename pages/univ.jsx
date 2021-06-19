@@ -7,7 +7,10 @@ import Spiner from "../components/Spiner.jsx";
 import { useClass } from "../plugin/thme.js";
 import HeadComponents from  "../components/HeadComponents"
 import Bounce from "react-reveal/Bounce";
+import Search from "../components/search.jsx";
  
+
+
 import StyleUniv from "../styles/univ.module.css"
 
 
@@ -18,6 +21,7 @@ export default () =>
   const router = useRouter();
  
   const [darkTheme, setDarkTheme, consumer] = useClass();
+  const [prediction, setPrediction] = useState("")
   const [filter, setFilter] = useState({
     contry:[],
 curriculum:"",
@@ -44,8 +48,8 @@ language:[]
            <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
           
         <div className={consumer+" "+StyleUniv.container }>
-          
- 
+          {prediction ? <Bounce top> <Search /> </Bounce>:
+          <Bounce top>
           <section className=" mx-auto">
              <h2 className="my-4 mx-auto fw-lighter text-center">Trouver universités</h2>
              <p className="text-center m-4"><i className="bi bi-info-circle-fill mx-4"></i> Sélectionnez votre profil type en cliquant sur les choix ci-dessous , et obtenez des prédiction sur vos potentielles établissements</p>
@@ -103,8 +107,10 @@ language:[]
             { allFilter.publicSchool.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, publicSchool: i})}  >  { i ? "Public" : "Privé" } </button> ) }
             </div>
           </section>
-          <hr />
+          <hr/>
           <button className="btn btn-dark btn -lg my-4 mx-auto">Valider </button>
+          </Bounce>
+          }
           </div>
 
 

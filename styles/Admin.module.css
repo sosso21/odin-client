@@ -1,0 +1,18 @@
+.sectionRoot{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.Navigation{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+}
+.Navigation button{
+    width: 50%;
+    margin: 0 1px ;
+}
