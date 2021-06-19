@@ -13,8 +13,23 @@ const Header = ({ darkTheme = false, setDarkTheme = () => [] }) =>
 
   const [isConnect, setUsConnect] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
-/*
+ 
 
+// deleete after 
+ useEffect(() =>
+  {
+ if(router.route == "/univ"){
+  setUsConnect(true)
+ }
+ if(router.route == "/admin"){
+  setIsAdmin(true)
+ }
+  }, [router.route])
+
+
+
+
+/*
   useEffect(() =>
   {
 
