@@ -171,7 +171,7 @@ language:[],
 level:"",
 tcf:false,
 place:"",
-publicSchool:tru,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajouter</button>
+publicSchool:true ,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajouter</button>
 </div>
 }
 </section>
