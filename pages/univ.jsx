@@ -31,7 +31,9 @@ language:[]
     curriculum: [ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" , "réseau informatique" ],
     language:["francais","anglais","allemans"],
     contry:[ "États-Unis" , "Chine" , "Allemagne" , "Suisse" , "France", "Espagne" , "Angleterre" , "Italie" , "Canada"],
-    level:[1,2,3,4,5]
+    level:[1,2,3,4,5],
+    tcf:[true,false],
+    publicSchool:[true,false]
   } )
 
   return (
@@ -83,6 +85,25 @@ language:[]
             { allFilter.curriculum.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, curriculum: i})} onDoubleClick={()=>setFilter({...filter, curriculum:""})} >  { i } </button> ) }
             </div>
           </section>
+
+
+          <section  className="mx-auto test-center">
+            <h2 className="my-4 mx-auto fw-lighter text-center">Avez vous fait le test de connaissence de francais ? </h2>
+            <div className=" my-4 mx-auto d-flex justify-content-around align-item-center flex-wrap">
+
+            { allFilter.tcf.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, tcf: i})}  >  { i ? "oui" : "non" } </button> ) }
+            </div>
+          </section>
+
+          
+          <section  className="mx-auto test-center">
+            <h2 className="my-4 mx-auto fw-lighter text-center">Queltype d'université vous interesse  ? </h2>
+            <div className=" my-4 mx-auto d-flex justify-content-around align-item-center flex-wrap">
+
+            { allFilter.publicSchool.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, publicSchool: i})}  >  { i ? "Public" : "Privé" } </button> ) }
+            </div>
+          </section>
+
           </div>
 
 
