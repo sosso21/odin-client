@@ -101,11 +101,11 @@ const Search = ({classTheme="text-dark bg-light"}) => {
      </span>
      
      <span className="d-block">
-      LLe TCF est-il requis ? : <strong>+ {i.tcf ? "oui" : "non"}</strong>
+      LLe test de langue est-il requis ? : <strong>+ {i.tcf ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">
-      Type D'établesement : <strong>+ {i.publicSchool ? "Public" : "Privé"}</strong>
+      Type  d'établissement : <strong>+ {i.publicSchool ? "Public" : "Privé"}</strong>
      </span>
      
      <span className="d-block">
@@ -124,3 +124,4 @@ const Search = ({classTheme="text-dark bg-light"}) => {
 };
 
 export default Search;
+ 

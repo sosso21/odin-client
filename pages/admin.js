@@ -111,7 +111,7 @@ const HandleChangeArr = (value ,parent,key )=>{
 
 <h2 className="fw-lighter mx-auto my-2">Administrateur</h2>
 <section className={AdminStyle.Navigation}>
-    <button className="btn btn-lg btn-outline-hermes" onClick={()=>setSeeSection("univ")} >université </button>
+    <button className="btn btn-lg btn-outline-hermes" onClick={()=>setSeeSection("univ")} >universités </button>
     <button className="btn btn-lg btn-outline-hermes" onClick={()=>setSeeSection("user")} >Membres</button>
 </section>
 {
@@ -200,11 +200,11 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
      </span>
      
      <span className="d-block">
-      LLe TCF est-il requis ? : <strong>+ {i.tcf ? "oui" : "non"}</strong>
+      LLe test de langue est-il requis ? : <strong>+ {i.tcf ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">
-      Type D'établesement : <strong>+ {i.publicSchool ? "Public" : "Privé"}</strong>
+      Type  d'établissement  : <strong>{i.publicSchool ? "Public" : "Privé"}</strong>
      </span>
      
      <span className="d-block">
