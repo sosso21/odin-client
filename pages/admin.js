@@ -139,7 +139,7 @@ const HandleChangeArr = (value ,parent,key )=>{
         </div>
 
         <div className="input-group">
-        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == false ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: false})}  > privé </button>
+        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.publicSchool == false  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, publicSchool: false})}  > privé </button>
         <button className={"mx-4 my-2 btn btn-lg "+ (toChange.publicSchool == true  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, publicSchool: true })}  >Public</button>
         </div>
 
