@@ -1,0 +1,23 @@
+[
+    {
+        "svg": "bi-emoji-smile",
+        "title":"Simple",
+        "content":"la plateforme  est simple et facile à utiliser "
+    },
+    {
+        "svg": "bi-shield-fill-check",
+        "title":"Totalement sécurisé",
+        "content":"Aucune donnée personnelle n'est sauvegarder"
+    },
+    {
+        "svg": "bi-lightning-fill",
+        "title":"Résultat rapide",
+        "content":"Récoltez de prêteuse informations concernant vos futurs formations"
+        
+    },
+    {
+        "svg": "bi-heart-fill",
+        "title":"Orientation sur mesure ",
+        "content":"Récoltez de prêteuses informations concernant vos futurs formations"
+    }
+]
