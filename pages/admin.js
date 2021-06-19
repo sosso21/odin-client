@@ -136,8 +136,8 @@ const HandleChangeArr = (value ,parent,key )=>{
         </div>
 
         <div className="input-group">
-        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == false ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: false})}  >   Tcf Non oblicatoir</button>
-        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == true  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: true })}  >   Tcf  oblicatoir</button>
+        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == false ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: false})}  >test non obligatoire</button>
+        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == true  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: true })}  >test obligatoire </button>
         </div>
 
         <div className="input-group">
