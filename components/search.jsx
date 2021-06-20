@@ -101,7 +101,7 @@ const Search = ({classTheme="text-dark bg-light"}) => {
      </span>
      
      <span className="d-block">
-      LLe test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
+      Le test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">

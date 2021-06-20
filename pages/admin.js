@@ -200,7 +200,7 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
      </span>
      
      <span className="d-block">
-      LLe test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
+      Le test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">
