@@ -26,17 +26,17 @@ export default () =>
     contry:[],
 curriculum:"",
 level:"",
-tcf:"",
+tcl:"",
 publicSchool:"",
-language:[]
+languages:[]
   })
 
   const [allFilter, setallFilter] = useState({
     curriculum: [ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" , "réseau informatique" ],
-    language:[ "Anglais" , "Français" , "Chinois" , "allemand" , "Suisse" , "Espagnol" , "Italien" ],
+    languages:[ "Anglais" , "Français" , "Chinois" , "allemand" , "Espagnol" , "Italien" ],
     contry:[ "États-Unis" , "Chine" , "Allemagne" , "Suisse" , "France", "Espagne" , "Angleterre" , "Italie" , "Canada"],
     level:[1,2,3,4,5],
-    tcf:[true,false],
+    tcl:[true,false],
     publicSchool:[true,false]
   } )
 
@@ -68,7 +68,7 @@ language:[]
             <h2 className="my-4 mx-auto fw-lighter text-center">Sélectionnez vos Langues : </h2>
             <div className=" my-4 mx-auto d-flex justify-content-around align-item-center flex-wrap">
 
-            {allFilter.language.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.language.includes(i)  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, language:[...filter.language,i ]})} onDoubleClick={()=>setFilter({...filter, language:filter.language.filter(ii=> ii!=i) })} >  { i } </button> ) }
+            {allFilter.languages.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.languages.includes(i)  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, languages:[...filter.languages,i ]})} onDoubleClick={()=>setFilter({...filter, languages:filter.languages.filter(ii=> ii!=i) })} >  { i } </button> ) }
             </div>
           </section>
 
@@ -83,7 +83,7 @@ language:[]
         
         
           <section  className="mx-auto test-center">
-            <h2 className="my-4 mx-auto fw-lighter text-center">Quel sont la spatialité que vous voulez étudier?</h2>
+            <h2 className="my-4 mx-auto fw-lighter text-center">Quel est la spatialité que vous voulez étudier?</h2>
             <div className=" my-4 mx-auto d-flex justify-content-around align-item-center flex-wrap">
 
             { allFilter.curriculum.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, curriculum: i})} onDoubleClick={()=>setFilter({...filter, curriculum:""})} >  { i } </button> ) }
@@ -92,10 +92,10 @@ language:[]
 
 
           <section  className="mx-auto test-center">
-            <h2 className="my-4 mx-auto fw-lighter text-center">Avez vous fait le test de connaissance de Français ?</h2>
+            <h2 className="my-4 mx-auto fw-lighter text-center">Disposez vous d'un test de langue?</h2>
             <div className=" my-4 mx-auto d-flex justify-content-around align-item-center flex-wrap">
 
-            { allFilter.tcf.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, tcf: i})}  >  { i ? "oui" : "non" } </button> ) }
+            { allFilter.tcl.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.tcl == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, tcl: i})}  >  { i ? "oui" : "non" } </button> ) }
             </div>
           </section>
 
@@ -104,7 +104,7 @@ language:[]
             <h2 className="my-4 mx-auto fw-lighter text-center">Quel type d'université vous intéresse ? </h2>
             <div className=" my-4 mx-auto d-flex justify-content-around align-item-center flex-wrap">
 
-            { allFilter.publicSchool.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.curriculum == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, publicSchool: i})}  >  { i ? "Public" : "Privé" } </button> ) }
+            { allFilter.publicSchool.map(i => <button className={"mx-4 my-2 btn btn-lg "+ (filter.publicSchool == i  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setFilter({...filter, publicSchool: i})}  >  { i ? "Public" : "Privé" } </button> ) }
             </div>
           </section>
           <hr/>

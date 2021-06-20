@@ -14,53 +14,53 @@ import AdminStyle from "../styles/Admin.module.css"
 
 
 const data = [
-    {name:'Université de Chicago' ,contry : 'États-Unis' ,curriculum : ["Analyse de bases de données" , "Big Data" , "Cloud computing" , "Conception d'applications" , "Sécurité informatique" ] ,language: [ "Anglais" , "Espagnol"  ] ,level: '1' ,tcf : true ,place: "400" ,publicSchool:false },
+    {name:'Université de Chicago' ,contry : 'États-Unis' ,curriculum : ["Analyse de bases de données" , "Big Data" , "Cloud computing" , "Conception d'applications" , "Sécurité informatique" ] ,languages: [ "Anglais" , "Espagnol"  ] ,level: '1' ,tcl : true ,place: "400" ,publicSchool:false },
     
-    {name: 'Université Tsinghua' ,contry : 'Chine' ,curriculum : ["Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ] ,language: [ "Anglais" , "Chinois"  ] ,level:  '3' ,tcf : false ,place: "700" ,publicSchool: true },
+    {name: 'Université Tsinghua' ,contry : 'Chine' ,curriculum : ["Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ] ,languages: [ "Anglais" , "Chinois"  ] ,level:  '3' ,tcl : false ,place: "700" ,publicSchool: true },
     
-    { name: 'Université technique de Munich' ,contry : 'Allemagne' ,curriculum : [  "Cloud computing" , "intelligence artificielle" , "Génie logiciel"] ,language: [ "Anglais" , "allemand"  ] ,level:  '5' ,tcf : true ,place: "210" ,publicSchool: true },
+    { name: 'Université technique de Munich' ,contry : 'Allemagne' ,curriculum : [  "Cloud computing" , "intelligence artificielle" , "Génie logiciel"] ,languages: [ "Anglais" , "allemand"  ] ,level:  '5' ,tcl : true ,place: "210" ,publicSchool: true },
     
-    { name: 'ETH Zurich' ,contry : ' Suisse' ,curriculum : ["Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique"] ,language: [ "fr"  ] ,level:  '1' ,tcf : false ,place: "620" ,publicSchool: true },
+    { name: 'ETH Zurich' ,contry : ' Suisse' ,curriculum : ["Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique"] ,languages: [ "fr"  ] ,level:  '1' ,tcl : false ,place: "620" ,publicSchool: true },
     
-    {name: 'Université Paris Sciences et Lettres' ,contry : ' France' ,curriculum : [  "Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique" , "Sécurité informatique" ] ,language: [ "Français"  ] ,level:  '1' , tcf :true ,place: "700" , publicSchool:true },
+    {name: 'Université Paris Sciences et Lettres' ,contry : ' France' ,curriculum : [  "Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique" , "Sécurité informatique" ] ,languages: [ "Français"  ] ,level:  '1' , tcl :true ,place: "700" , publicSchool:true },
     
-    {name:'Université de Navarre ' ,contry : ' Espagne' ,curriculum :[ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" ] ,language: [ "Français" , "Espagnol"  ] ,level:  '1' ,tcf : false , place: "1350" ,publicSchool: true },
+    {name:'Université de Navarre ' ,contry : ' Espagne' ,curriculum :[ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" ] ,languages: [ "Français" , "Espagnol"  ] ,level:  '1' ,tcl : false , place: "1350" ,publicSchool: true },
     
-    { name: 'Université de Cambridge' ,contry : 'Angleterre' , curriculum :[ "intelligence artificielle" , "Cloud computing" ] ,language: [ "Anglais" ] ,level:  '5' ,tcf : true ,place: "150" , publicSchool:true },
+    { name: 'Université de Cambridge' ,contry : 'Angleterre' , curriculum :[ "intelligence artificielle" , "Cloud computing" ] ,languages: [ "Anglais" ] ,level:  '5' ,tcl : true ,place: "150" , publicSchool:true },
     
     
-    {name: 'Polytechnique de Milan ' ,contry : ' Italie' ,curriculum :["Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ,  "Génie logiciel"] ,language: [  "Italien"  ] ,level:  '1' ,tcf : false ,place: "1500" ,publicSchool: true },
+    {name: 'Polytechnique de Milan ' ,contry : ' Italie' ,curriculum :["Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ,  "Génie logiciel"] ,languages: [  "Italien"  ] ,level:  '1' ,tcl : false ,place: "1500" ,publicSchool: true },
     
     {name:  'University of Toronto' ,contry : ' Canada' , 
     curriculum : [ "Analyse de bases de données" , "Big Data" ,"Cloud computing" , "intelligence artificielle" , "Génie logiciel"] , 
      
-    language:  [ "Anglais", "Français"  ] , 
-    level:   '1'  , tcf :  true ,  
+    languages:  [ "Anglais", "Français"  ] , 
+    level:   '1'  , tcl :  true ,  
     place: "530" , publicSchool: true },
     
-    {name: 'Johns Hopkins University' ,contry : 'Etats-Unis' ,curriculum : [  "Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique" , "Architecture logicielle et matérielle"] ,language: [ "Anglais"  ] ,level:  '1' ,tcf : false ,place: "1000" ,publicSchool: true },
+    {name: 'Johns Hopkins University' ,contry : 'Etats-Unis' ,curriculum : [  "Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique" , "Architecture logicielle et matérielle"] ,languages: [ "Anglais"  ] ,level:  '1' ,tcl : false ,place: "1000" ,publicSchool: true },
     
     
-    {name :  'Université de Paris' ,contry : 'France' ,curriculum : ["Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" ] ,language: [ "Français"  ] , level:'1' ,tcf :  false ,place:"1000" ,publicSchool: true },
+    {name :  'Université de Paris' ,contry : 'France' ,curriculum : ["Cloud computing" , "intelligence artificielle" , "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" ] ,languages: [ "Français"  ] , level:'1' ,tcl :  false ,place:"1000" ,publicSchool: true },
     
-    {name :  'Université de Pékin' ,contry : 'Chine' , curriculum : [  "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications"] , language:[ "Français" , "Anglais" , "Chinois"  ] ,level: '1' ,tcf :  false , place:"1050" , publicSchool: true },
+    {name :  'Université de Pékin' ,contry : 'Chine' , curriculum : [  "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications"] , languages:[ "Français" , "Anglais" , "Chinois"  ] ,level: '1' ,tcl :  false , place:"1050" , publicSchool: true },
     
      
-    { name : 'Université Agrosup Dijon' ,contry : 'France' ,curriculum :  [ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" ] ,language:[ "Français" , "Anglais"  ] , level:'3' , tcf : false ,place:"540" ,publicSchool: false },
+    { name : 'Université Agrosup Dijon' ,contry : 'France' ,curriculum :  [ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" ] ,languages:[ "Français" , "Anglais"  ] , level:'3' , tcl : false ,place:"540" ,publicSchool: false },
     
-    {name :  'Université de Valence' ,contry : 'Espagne' ,curriculum :  [ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" ] , language:[  "Espagnol"  ] , level:'1' ,tcf :  true ,place: "1000" ,publicSchool:  true },
+    {name :  'Université de Valence' ,contry : 'Espagne' ,curriculum :  [ "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" ] , languages:[  "Espagnol"  ] , level:'1' ,tcl :  true ,place: "1000" ,publicSchool:  true },
     
-    { name : 'University College London' ,contry : 'Angleterre' ,curriculum :  [ "Système d'information" ] ,language: [ "Anglais" ] ,level: '5' , tcf : true ,place:"100" ,publicSchool: true },
+    { name : 'University College London' ,contry : 'Angleterre' ,curriculum :  [ "Système d'information" ] ,languages: [ "Anglais" ] ,level: '5' , tcl : true ,place:"100" ,publicSchool: true },
     
-    {name :  'Université de la Tuscia' ,contry : 'Italie' ,curriculum :  ["Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" ] ,language: [  "Italien" , "Français" ] ,level: '1' , tcf : false ,place:"1500" , publicSchool: true },
+    {name :  'Université de la Tuscia' ,contry : 'Italie' ,curriculum :  ["Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information" , "intelligence artificielle" ] ,languages: [  "Italien" , "Français" ] ,level: '1' , tcl : false ,place:"1500" , publicSchool: true },
     
-    {name :  'université de montréal' ,contry : 'Canada' ,curriculum :  [   "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique"] ,language: [  "Français"  ] ,level: '1' ,tcf :false ,place: "710" ,publicSchool: true },
+    {name :  'université de montréal' ,contry : 'Canada' ,curriculum :  [   "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique"] ,languages: [  "Français"  ] ,level: '1' ,tcl :false ,place: "710" ,publicSchool: true },
     
-    {name :  'université du Zhejiang' ,contry : 'Chine' , curriculum : [  "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information"] ,language: [ "Anglais" , "Chinois"  ] , level:'3' ,tcf : true ,place:"1200" ,publicSchool: true },
+    {name :  'université du Zhejiang' ,contry : 'Chine' , curriculum : [  "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications" , "Système d'information"] ,languages: [ "Anglais" , "Chinois"  ] , level:'3' ,tcl : true ,place:"1200" ,publicSchool: true },
     
-    {name :  'Université Le Havre Normandie' ,contry : 'France' , curriculum : [  "Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ,  "Génie logiciel" ] ,language: [ "Français"  ] ,level: '5' ,tcf :  false ,place:"170" ,publicSchool: true },
+    {name :  'Université Le Havre Normandie' ,contry : 'France' , curriculum : [  "Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ,  "Génie logiciel" ] ,languages: [ "Français"  ] ,level: '5' ,tcl :  false ,place:"170" ,publicSchool: true },
     
-    {name :  'université franklin switzerland' ,contry : 'Suisse' ,curriculum :  [  "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications"] ,language: [ "Anglais" , "Suisse"  ] , level:'1' ,tcf :  true ,place:"930" , publicSchool:false }
+    {name :  'université franklin switzerland' ,contry : 'Suisse' ,curriculum :  [  "Analyse de bases de données" , "Big Data" , "Cloud computing", "Génie logiciel" , "réseau informatique" , "Sécurité informatique" , "Architecture logicielle et matérielle" , "Conception d'applications"] ,languages: [ "Anglais" , "Suisse"  ] , level:'1' ,tcl :  true ,place:"930" , publicSchool:false }
     ]
 
 
@@ -94,8 +94,8 @@ const HandleChangeArr = (value ,parent,key )=>{
     let arr = parent
     if(parent.curriculum){
         arr.curriculum[key] = value
-    }else if(parent.language){
-        arr.language[key] = value
+    }else if(parent.languages){
+        arr.languages[key] = value
     }
       setToChange({...toChange,arr})
 
@@ -136,8 +136,8 @@ const HandleChangeArr = (value ,parent,key )=>{
         </div>
 
         <div className="input-group">
-        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == false ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: false})}  >test non obligatoire</button>
-        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcf == true  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcf: true })}  >test obligatoire </button>
+        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcl == false ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcl: false})}  >test non obligatoire</button>
+        <button className={"mx-4 my-2 btn btn-lg "+ (toChange.tcl == true  ? "btn-hermes" : "btn-outline-hermes" )  } onClick={()=> setToChange({...toChange, tcl: true })}  >test obligatoire </button>
         </div>
 
         <div className="input-group">
@@ -155,13 +155,13 @@ const HandleChangeArr = (value ,parent,key )=>{
 <button className="btn btn-lg btn-hermes mx-auto" onClick={()=>setToChange({...toChange,curriculum : [...toChange.curriculum,""]})}>+</button>
 
 <h2>Langues: </h2>
-{toChange.language.map((i,k) =>  
+{toChange.languages.map((i,k) =>  
 <div className="input-group">
-    <button onClick={()=> setToChange({...toChange,language: (toChange.language).filter((ii ,kk)=>kk ==k ) })} className="btn btn-danger btn-sm">supprimer</button> 
-    <input type="text" value={i} onChange={e=>HandleChangeArr(e.target.value,{language: toChange.language},k)} className="form-control" placeholder="Langues"/>
+    <button onClick={()=> setToChange({...toChange,languages: (toChange.languages).filter((ii ,kk)=>kk ==k ) })} className="btn btn-danger btn-sm">supprimer</button> 
+    <input type="text" value={i} onChange={e=>HandleChangeArr(e.target.value,{languages: toChange.languages},k)} className="form-control" placeholder="Langues"/>
 </div> 
     ) }
-<button className="btn btn-lg btn-hermes mx-auto" onClick={()=>setToChange({...toChange,language : [...toChange.language,""]})}>+</button>
+<button className="btn btn-lg btn-hermes mx-auto" onClick={()=>setToChange({...toChange,languages : [...toChange.languages,""]})}>+</button>
 <div className="input-group">
 {(toChange.status == "add")?<button className="btn btn-lg btn-hermes mx-auto">Ajouter</button>: <button className="btn btn-lg btn-hermes mx-auto">Modifier</button>}
 </div>
@@ -169,9 +169,9 @@ const HandleChangeArr = (value ,parent,key )=>{
 <button onClick={()=> setToChange({name:"",
 contry:"",
 curriculum:[],
-language:[],
+languages:[],
 level:"",
-tcf:false,
+tcl:false,
 place:"",
 publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajouter</button>
 </div>
@@ -191,7 +191,7 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
      </span>
      <span className="d-block">
       Langues requise:   <ul>
-      {i.language.map(ii=> <li>{ii} </li> )}
+      {i.languages.map(ii=> <li>{ii} </li> )}
       </ul>
       </span>
       
@@ -200,7 +200,7 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
      </span>
      
      <span className="d-block">
-      Le test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
+      Le test de langue est-il requis ? : <strong> {i.tcl ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">
