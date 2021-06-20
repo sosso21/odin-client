@@ -97,19 +97,19 @@ const Search = ({classTheme="text-dark bg-light"}) => {
       </span>
       
      <span className="d-block">
-       Nieau minimum requis :  BAC <strong>+ {i.level}</strong>
+       Nieau minimum requis :  BAC <strong>+{i.level}</strong>
      </span>
      
      <span className="d-block">
-      LLe test de langue est-il requis ? : <strong>+ {i.tcf ? "oui" : "non"}</strong>
+      LLe test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">
-      Type  d'établissement : <strong>+ {i.publicSchool ? "Public" : "Privé"}</strong>
+      Type  d'établissement : <strong> {i.publicSchool ? "Public" : "Privé"}</strong>
      </span>
      
      <span className="d-block">
-      Nombre de places restantes : <strong>+ {i.place}</strong>
+      Nombre de places restantes : <strong>  {i.place}</strong>
      </span>
      </li>
       ) }

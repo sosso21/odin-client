@@ -200,7 +200,7 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
      </span>
      
      <span className="d-block">
-      LLe test de langue est-il requis ? : <strong>+ {i.tcf ? "oui" : "non"}</strong>
+      LLe test de langue est-il requis ? : <strong> {i.tcf ? "oui" : "non"}</strong>
      </span>
 
      <span className="d-block">
@@ -208,7 +208,7 @@ publicSchool:true,status:"add"})} className="btn btn-lg btn-hermes mx-auto">Ajou
      </span>
      
      <span className="d-block">
-      Nombre de places restantes : <strong>+ {i.place}</strong>
+      Nombre de places restantes : <strong>{i.place}</strong>
      </span>
      <div className="input-group">
 <button   onClick={()=>{setToChange({...i,status:"modify"});sliderRef.current.scrollIntoView({ behavior: 'smooth' })} } className="btn btn-lg btn-success mx-auto">Modifier</button>
