@@ -74,6 +74,19 @@ const Search = ({classTheme="text-dark bg-light",data = defData}) => {
     }else{
       setunivlist( data.filter(d=> ((d.name).toLowerCase()).search((searchInput).toLowerCase() ) != -1 ||
      ((d.contry).toLowerCase()).search((searchInput).toLowerCase()) != -1  ||  d.curriculum.map(e=> (e.toLowerCase()).search(searchInput.toLowerCase() ) !=1)  ))
+
+
+    // --- when we finish the api : 
+    /*
+  fetch( `${{process.env.NAMEWEBSITE}}/api/prediction/filter/`+searchInput)
+  .then( res => res.json() )
+  .then(result=> {
+    setunivlist(result);
+  } )
+
+    */
+
+
     }
   }, [searchInput]);
   
