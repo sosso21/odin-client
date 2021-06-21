@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from 'next/link'
 import Header from "../components/header";
@@ -13,11 +13,29 @@ import HomeSyle from "../styles/Home.module.css"
 
 export default () =>
 {
+
   
   const router = useRouter();
  
   const [darkTheme, setDarkTheme, consumer] = useClass();
   
+useEffect(() => {
+  console.log('useEffect:', "http://127.0.0.1/api/prediction/all")
+  fetch( `https://127.0.0.1/api/prediction/all`,{ headers: {
+    'Accept': 'application/json, text/plain, */*',
+    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+  }})
+  .then( res => res.json() )
+  .then(result=> {
+  console.log('result:', result)
+  },err=>{
+    console.log('err:', err)
+
+  })
+
+
+}, []);
+
   return (
     <>
     <HeadComponents/>

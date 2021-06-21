@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
- const data = [
+ const defData = [
   {name:'Université de Chicago' ,contry : 'États-Unis' ,curriculum : ["Analyse de bases de données" , "Big Data" , "Cloud computing" , "Conception d'applications" , "Sécurité informatique" ] ,languages: [ "Anglais" , "Espagnol"  ] ,level: '1' ,tcl : true ,place: "400" ,publicSchool:false },
   
   {name: 'Université Tsinghua' ,contry : 'Chine' ,curriculum : ["Système d'information" , "Big Data" , "Cloud computing" , "intelligence artificielle" ] ,languages: [ "Anglais" , "Chinois"  ] ,level:  '3' ,tcl : false ,place: "700" ,publicSchool: true },
@@ -64,9 +64,10 @@ import { useState, useEffect } from "react";
   */
    
 
-const Search = ({classTheme="text-dark bg-light"}) => {
+const Search = ({classTheme="text-dark bg-light",data = defData}) => {
   const [searchInput, setSearchInput] = useState('')
   const [univlist, setunivlist] = useState(data)
+  console.log('univlist:', univlist)
   useEffect(() => {
     if (searchInput=="") {
       setunivlist(data)
@@ -124,64 +125,5 @@ const Search = ({classTheme="text-dark bg-light"}) => {
 };
 
 export default Search;
- /*
+  
 
-_id: int ,
-name:VARCHAR(255),
-contry:VARCHAR(31),
-curriculum: jointure de tableauc ,
-languages:jointure de tableauc ,
-level:smallint,
-tcl:Bolean,
-place:int,
-publicSchool:Bolean,
-
-
-
-*/
-/*
-
-let syntaxeUniv = "INSERT INTO univ (`name`,`contry`,`level`,`tcl`,`place`,`publicSchool`) VALUES"
-
-let syntaxCurriculum = "INSERT INTO curriculum (`name`,`for_univ` ) VALUES"
-
-let syntaxLanguages = "INSERT INTO languages (`name`,`for_univ` ) VALUES"
- 
-
-for (let index = 0; index < data.length; index++) {
-  const element = data[index];
-  let  lineUniv =  `\n ("${element.name}",'${element.contry}','${element.level}','${element.tcl}','${element.place}','${element.publicSchool}')`
-
-  let lineCurriculum = ""
-  element.curriculum.map((i,k)=> {
-    lineCurriculum += `\n ("${i}",'${index+1}' )`
-    if (element.curriculum.length-1 == k  && data.length-1 == index ) {
-      lineCurriculum += ";"
-    }else{
-      lineCurriculum += ","
-    }
-    })
-
-    let lineLanguages = ""
-    element.languages.map((i,k)=> {
-      lineLanguages += `\n ('${i}','${index+1}' )`
-      if (element.languages.length-1 == k  && data.length-1 == index ) {
-        lineLanguages += ";"
-      }else{
-        lineLanguages += ","
-      }
-      })
-
-  if(data.length-1 == index ){
-    lineUniv+= ";"
-  }else{
-    lineUniv+= ","
-  }
-  syntaxeUniv += lineUniv
-  syntaxCurriculum += lineCurriculum
-  syntaxLanguages += lineLanguages
-}
-
-console.log('--- insert university  : \n  ', syntaxe , " \n \n \n ----inseet curiculum : \n " ,syntaxCurriculum  , "\n \n \n \n --insert languaguages:  \n " ,syntaxLanguages)
-
-*/
