@@ -101,6 +101,20 @@ languages:[]
       }, 10000);
     }
 
+    // --- when we finish the api : 
+    /*
+  fetch( `${{process.env.NAMEWEBSITE}}/api/prediction/univ`{
+    body:filter
+  } )
+  .then( res => res.json() )
+  .then(result=> {
+  console.log('result:', result)
+  },err=>{
+    setMyPredictions(err)
+
+  })
+
+    */
 
   }
 
