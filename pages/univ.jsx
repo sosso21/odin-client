@@ -103,14 +103,15 @@ languages:[]
 
     // --- when we finish the api : 
     /*
-  fetch( `${{process.env.NAMEWEBSITE}}/api/prediction/univ`{
+  fetch( `${{process.env.NAMEWEBSITE}}/api/prediction/univ`,{
+    methode:"POST",
     body:filter
   } )
   .then( res => res.json() )
   .then(result=> {
-  console.log('result:', result)
+    setMyPredictions(result)
   },err=>{
-    setMyPredictions(err)
+    console.log('err:', err)
 
   })
 
@@ -205,7 +206,7 @@ languages:[]
           </div> </Bounce>}
           </div>
           : 
-          <Bounce left><h1> {MyPredictions.length}</h1> <Search data={MyPredictions}/></Bounce> 
+          <Bounce left><Search data={MyPredictions}/></Bounce> 
 }
 
           <Footer />
