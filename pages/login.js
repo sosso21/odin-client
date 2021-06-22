@@ -19,6 +19,18 @@ const Signin=() => {
 
   const onConnect=(e) => {
     e.preventDefault();
+
+ 
+    let isAdmin =false 
+    if(log.email =="admin@odin.com" && log.pass =="123445" ){
+      isAdmin= true
+    }
+      localStorage.setItem( 'token', log.email+"%pass%"+ log.pass1 ); 
+      localStorage.setItem( 'isAdmin', isAdmin); 
+      return  router.push("/univ")
+
+
+    /// after finish  api 
     const header={
       method: 'POST',
       headers: {

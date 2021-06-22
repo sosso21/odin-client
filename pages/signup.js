@@ -6,10 +6,11 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import StyleSignup from "../styles/log.module.css";
 import HeadComponents from  "../components/HeadComponents"
-
 import { useRouter } from "next/router";
+ 
 
 const Signup = () => {
+  const router = useRouter();
   const [log, setLog] = useState({
     condition: false,
     name: "",
@@ -37,8 +38,23 @@ const Signup = () => {
     if (log.pass1 != log.pass2) {
       return setErrorLogin({
         error: "les mots de passes ne sont pas indentique",
-      });
+      })
     }
+    else{
+      
+setDisableBTN(false) 
+
+  setPageState(2);
+  localStorage.setItem( 'token', log.email+"%pass%"+ log.pass1 ); 
+  localStorage.setItem( 'isAdmin', false); 
+    setTimeout(() => {
+      router.push("/univ")
+    }, 5000);
+     
+    }
+
+    /// when we finish api
+
 
     const header = {
       method: "POST",
@@ -47,10 +63,12 @@ const Signup = () => {
         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
       },
       body: new URLSearchParams({
-        firstname: log.name,
-        lastname: log.lastname,
+        fname: log.name,
+        lname: log.lastname,
         email: log.email,
         pass: log.pass1,
+        pass1:log.pass1,
+        pass2:log.pass2
       }).toString(),
     };
 setDisableBTN(true)

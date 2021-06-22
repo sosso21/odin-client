@@ -103,7 +103,7 @@ languages:[]
 
     // --- when we finish the api : 
     /*
-  fetch( `${{process.env.NAMEWEBSITE}}/api/prediction/univ`,{
+  fetch( `${process.env.NAMEWEBSITE}/api/prediction/univ`,{
     methode:"POST",
     body:filter
   } )

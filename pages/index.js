@@ -18,9 +18,10 @@ export default () =>
   const router = useRouter();
  
   const [darkTheme, setDarkTheme, consumer] = useClass();
+  const [isConnect, setIsConnect] = useState(false)
   
 useEffect(() => {
-  console.log('useEffect:', "http://127.0.0.1/api/prediction/all")
+  
   fetch( `https://127.0.0.1/api/prediction/all`,{ headers: {
     'Accept': 'application/json, text/plain, */*',
     'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -33,8 +34,18 @@ useEffect(() => {
 
   })
 
-
 }, []);
+
+
+
+
+useEffect(() => {
+if (localStorage.getItem("token")) {
+  setIsConnect(true)
+  }
+}, [router.route])
+
+
 
   return (
     <>
@@ -54,7 +65,7 @@ useEffect(() => {
 <Search classTheme={consumer} />
 </Bounce>
 </div>
-          <Bounce left>
+        {isConnect ==false ?  <Bounce left>
           <section className={HomeSyle.ListGroup}>
    
         <Link href="/login">
@@ -68,7 +79,11 @@ useEffect(() => {
    
     </section>
 
-    </Bounce>
+    </Bounce>: <div className="w-100 my-4 mx-auto text center d-flex justify-content-center">
+    <Link href="/univ">
+          <a className="btn btn-lg btn-hermes mx-auto">  Trouver universités  </a>
+        </Link>
+    </div> }
 
           <Footer />
         </main>

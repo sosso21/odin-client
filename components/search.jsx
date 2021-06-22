@@ -78,7 +78,7 @@ const Search = ({classTheme="text-dark bg-light",data = defData}) => {
 
     // --- when we finish the api : 
     /*
-  fetch( `${{process.env.NAMEWEBSITE}}/api/prediction/filter/`+searchInput)
+  fetch( `${process.env.NAMEWEBSITE}/api/prediction/filter/`+searchInput)
   .then( res => res.json() )
   .then(result=> {
     setunivlist(result);

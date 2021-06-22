@@ -14,7 +14,7 @@ const Header = ({ darkTheme = false, setDarkTheme = () => [] }) =>
   const [isConnect, setUsConnect] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
  
-
+/*
 // deleete after 
  useEffect(() =>
   {
@@ -26,19 +26,25 @@ const Header = ({ darkTheme = false, setDarkTheme = () => [] }) =>
  }
   }, [router.route])
 
+*/
 
-
-
-/*
+ 
   useEffect(() =>
   {
 
     if (localStorage.getItem("token")) {
       setUsConnect(true);
-      sessionStorage.getItem("userInfo") && setIsAdmin(JSON.parse(sessionStorage.getItem("userInfo")).isAdmin)
+      if(localStorage.getItem("isAdmin")){
+        setIsAdmin(true)
+      }
 
-      if ((["/login", "/signup","/"]).includes(router.route) ) {
+      //sessionStorage.getItem("userInfo") && setIsAdmin(JSON.parse(sessionStorage.getItem("userInfo")).isAdmin)
+
+      if ((["/login", "/signup" ]).includes(router.route) ) {
         router.push("/univ");
+      }
+      if (router.route =="/admin" && !localStorage.getItem("isAdmin") ) {
+        router.push("/");
       }
     }
     else if ((["/admin","univ"]).includes(router.route)) {
@@ -57,7 +63,7 @@ const Header = ({ darkTheme = false, setDarkTheme = () => [] }) =>
       router.reload();
     }
   }
-*/ 
+ 
 
   return (
     <header className={StyleHeader.sticky} >
@@ -72,11 +78,12 @@ const Header = ({ darkTheme = false, setDarkTheme = () => [] }) =>
  
 
           </Nav>
-          {isConnect ?
+          {!!isConnect ?
             <Nav className="mr-auto">
               {!!isAdmin && <Link href="/admin"><a className="nav-link"><i className="bi bi-gear-fill mx-1"></i>Administration</a></Link>}
-               
-               
+              <Link href="/univ"><a className="nav-link"><i className="bi bi-list-check mx-1"></i>ATrouver universités</a></Link>
+              
+
               <button className="nav-link btn btn-link" onClick={(e) => disconnect()} ><i className="bi bi-person-x-fill mx-1"></i> Déconnexion</button>
             </Nav>
             :
