@@ -15,11 +15,11 @@ const Footer = () => {
       </div>
 
       
-      <div className="d-flex justify-content-around flex-wrap">
-        <p>{new Date().getFullYear()} All right is reserved</p>
-        <p>Propriétaire officiel : <strong>Manar Menassel</strong></p>
-        <p>Réaliser avec amour par : <strong><a href="https://hermes-dev-fr.web.app" className="btn btn-link" >Hermes dev </a></strong> <i className="bi bi-heart"></i> </p>
-      </div>
+      <ul className="mt-4 d-flex justify-content-around flex-wrap">
+        <li>{new Date().getFullYear()} All right is reserved</li>
+        <li>Propriétaire officiel : <strong>Manar Menassel</strong></li>
+        <li>Réaliser avec amour par : <strong><a href="https://hermes-dev-fr.web.app" className="text-link" target="_blanck" >Hermes dev </a></strong> <i className="bi bi-heart"></i> </li>
+      </ul>
 
  
     </footer>
