@@ -79,9 +79,9 @@ if (localStorage.getItem("token")) {
    
     </section>
 
-    </Bounce>: <div className="w-100 my-4 mx-auto text center d-flex justify-content-center">
+    </Bounce>: <div className="w-100 my-4  d-flex justify-content-center">
     <Link href="/univ">
-          <a className="btn btn-lg btn-hermes mx-auto">  Trouver universités  </a>
+          <a className="btn btn-lg btn-hermes mx-auto my-4">  Trouver universités  </a>
         </Link>
     </div> }
 

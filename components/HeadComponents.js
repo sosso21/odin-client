@@ -24,6 +24,7 @@ const defaultMeta = {
   return (
     <Head>
       <meta name="google-site-verification" content="pTTbSgAS5CwwPLoa2OYdnC3y3EFiAAHDtdqm5n8oFnc" />
+      <title>{defaultMeta.title}</title>
       
       <meta name="title" content={meta.title} />
       <meta name="description" content={meta.description} />
